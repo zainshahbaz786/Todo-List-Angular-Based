@@ -1,0 +1,46 @@
+<div class="todos" style="background-color: transparent;">
+<form (submit)="addTodo()">
+<input  type="text" 
+name="inputTodo" 
+style="background-color: transparent; color: rgb(226, 49, 17);text-align: center;"
+placeholder="Enter Todo Work..."  
+class="todo-input"
+[(ngModel)]="inputTodo"
+/>
+<input type="submit" value="Add Todo" class="todo-submit" style="background-color: rgb(49,59,61);">
+</form>
+
+
+    <div  *ngFor="let todo of todos; let i=index;" class="todo {{ (todo.completed ?  'done':'') }} " style="background-color:transparent;" >
+        <div class="id" >{{i}}</div>
+        <div class="content" (click)="toggleDone(i)">{{todo.content}}</div>
+        <button class="delete" (click)="deleteTodo(i)" >Remove</button>
+        <!-- {{title}} -->
+
+    </div>
+
+
+
+<!-- Here im explaining the upper lines of the codes -->
+<!--  <div  *ngFor="let todo of todos; let i=index;" class="todo {{ (todo.completed ?  'done':'') }}" >
+    -->
+<!-- class todo {{(todo.completed?....)}} -->
+<!-- This is basically a function that is used using the html ng for property for creating an item and using it
+int he array also it contain the condition for matching -->
+
+
+
+<!-- As tjis thing is mentioned in the css file that if ot is done, then add an line OVER IT! -->
+<br>
+
+</div>
+
+
+<div style="text-align: center;text-decoration:solid;color:black;">
+<i style="text-align:center; font-weight: 500;" >Strikethrough Text Indicate the Completed Tasks</i>
+<br>
+<strong>Click on Todo Note to mark it as Completed</strong>
+</div>
+
+
+

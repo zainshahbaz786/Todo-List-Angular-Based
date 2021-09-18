@@ -1,0 +1,21 @@
+
+
+
+h1 {
+	font-family: 'Zen Loop', cursive;
+    	font-size: 50px;
+	margin-bottom: 30px;
+    text-align: center;
+}
+h3 {
+	font-family: 'Great Vibes', cursive;
+font-family: 'Tourney', cursive;
+font-family: 'Zen Loop', cursive;
+/* font-family: 'Zen Loop', cursive; */
+    	font-size: 35px;
+	margin-bottom: 10px;
+    font-weight: 200;
+    color:springgreen;
+    text-align: center;
+    font-weight: 600;
+}
